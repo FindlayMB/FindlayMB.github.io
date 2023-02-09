@@ -48,10 +48,10 @@ main{
     margin-bottom: 30px;
 }
 
-main a:link{
+main p a:link{
     color:blueviolet;
 }
-main a:hover{
+main p a:hover{
     color:rgb(157, 52, 255);
     transition: color 1s ease-out;
 }
