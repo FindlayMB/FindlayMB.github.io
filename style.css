@@ -197,8 +197,12 @@ main p a:hover{
     text-align: end;
     margin-bottom: 15px;
 }
-.main-right.alt li a:link{
+a#linkchange:link{
     color:blueviolet;
+}
+a#linkchange:hover{
+    color:rgb(157, 52, 255);
+    transition: color 1s ease-out;
 }
 .main-right.alt li a:hover{
     color:rgb(157, 52, 255);
