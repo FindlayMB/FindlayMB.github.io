@@ -1,0 +1,225 @@
+html, body{ margin:0; padding: 0;}
+html{height: 100%;}
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    height: 100%;
+}
+
+/* Nav bar */
+nav{
+    display: flex;
+    justify-content: center;
+    height: 71px;
+    flex-direction: row;
+    font-size: large;
+    margin-top: 12px;
+    padding: 5px;
+    border-top: solid 3px blueviolet;
+    border-bottom: solid 1px rgb(180, 180, 180);
+    text-decoration: none;
+}
+nav a:link{text-decoration: none;}
+nav a:hover{
+    color: blueviolet;
+    transition: color 1s;
+}
+nav .nav-item{
+    margin-left: 15px;
+    margin-right: 15px;
+    color:rgb(156, 156, 156);
+}
+nav .nav-current{
+    margin-left: 15px;
+    margin-right: 15px;
+    color:blueviolet;
+}
+
+/* Main body*/
+main{
+    display: flex;
+    flex-basis: 80%;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Main content with picture*/
+.main-left{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-right: solid 1px;
+    border-right-color:rgb(214, 214, 214);
+    width: 300px;
+    padding-right: 15px;
+}
+.main-left img {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    box-shadow:  0 6px 3px -1px black;
+}
+.main-left h1{
+    margin-block-start: 10px;
+    margin-block-end: 5px;
+}
+.main-left h3{
+    margin-block-start: 2px;
+    margin-block-end: 5px;
+}
+.main-left p{
+    margin-block-start: 2px;
+    margin-block-end: 5px;
+    color: blueviolet;
+}
+
+/* Main content right of picture
+ * for pages: index and skills */
+.main-right{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    padding-bottom: 20px;
+    width: 70%;
+}
+.main-right ul{
+    width:300px;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.main-right li {
+    float:left;
+    line-height:26px;
+    height:26px;
+    width:150px;
+}
+.main-right input{
+    width: 15px;
+    height: 15px;
+}
+.main-right p{
+    inline-size: 90%;
+    margin-block-start: 8px;
+}
+.main-right h1{
+    color:rgb(156, 156, 156);
+    font-size: 32px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+.main-right label{font-weight: bold;}
+.main-right progress{
+    color: blue;
+    width: 820px;
+    height: 30px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+#alt-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#alt-left{
+    flex-grow: 1;
+    justify-content: left;
+    
+}
+#alt-right{
+    flex-grow: 1;
+    justify-content: left;
+    text-align: right;
+}
+
+#title, #date{
+    font-size: 24px;
+    margin-top: -10px;
+    margin-bottom: -8px;
+    color: black;
+}
+
+#title{
+    font-weight: bolder;
+    color: black;
+}
+.main-right.alt ul{
+    width:auto;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.main-right.alt li {
+    float:left;
+    line-height:26px;
+    height:26px;
+    width: 300px;
+}
+.main-right.alt h1{
+    color:rgb(156, 156, 156);
+    font-size: 32px;
+    font-weight: lighter;
+    margin-bottom: 30px; 
+}
+.main-right.alt .left-align{
+    width: 50%;
+    font-weight: bold;
+    font-size:x-large;
+    text-align: start;
+}
+.main-right.alt .right-align{
+    width: 30%;
+    font-size: x-large;
+    text-align: end;
+}
+.main-right.alt .left-align-small{
+    width: 50%;
+    font-size:medium;
+    text-align: start;
+    margin-bottom: 15px;
+}
+.main-right.alt .right-align-small{
+    width: 30%;
+    font-size:medium;
+    text-align: end;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    height: 12px;
+    position: relative;
+    justify-content: center;
+    font-size: 12px;
+    width: auto;
+    border-top: solid 1px;
+    border-top-color:rgb(180, 180, 180) ;
+    padding: 20px;
+    transform: translate(0);   
+}
+
+/* Moves main right to below picture*/
+@media only screen and (max-width:1190px){
+    body{flex-direction: column;}
+    .main-right{width: 80%; margin-left: 0;}
+    .main-right progress{width: auto;}
+    .main-right p{inline-size: 100%;}
+    .main-right.alt p{inline-size: 100%;}
+    .main-left{
+        width: 90%;
+        padding-bottom: 25px;
+        border-bottom: solid 1px;
+        border-bottom-color: rgb(214, 214, 214);
+        border-right: 0px;    
+    }
+    .main-right h1{align-self: center;}
+}
+
+
