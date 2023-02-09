@@ -23,7 +23,7 @@ nav{
 nav a:link{text-decoration: none;}
 nav a:hover{
     color: blueviolet;
-    transition: color 1s;
+    transition: color 0.5s ease-out;
 }
 nav .nav-item{
     margin-left: 15px;
@@ -47,7 +47,13 @@ main{
     margin-top: 20px;
     margin-bottom: 30px;
 }
-
+main a:link{
+    color:blueviolet;
+}
+main a:hover{
+    color:rgb(157, 52, 255);
+    transition: color 1s ease-out;
+}
 /* Main content with picture*/
 .main-left{
     display: flex;
